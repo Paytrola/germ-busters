@@ -1,8 +1,10 @@
 {
-    "name": "Germ Busters",
+    "name": "Germ Busters real",
     "description": "blah blah",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.2",
+        "browser-events": "*"
     },
     "files": [
         "main.blocks",
