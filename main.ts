@@ -1,3 +1,9 @@
+controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (GERM_FIGHTER.vy == 0) {
+        GERM_FIGHTER.vy = -170
+        GERM_FIGHTER.startEffect(effects.warmRadial, 200)
+    }
+})
 browserEvents.D.onEvent(browserEvents.KeyEvent.Pressed, function () {
     animation.runImageAnimation(
     GERM_FIGHTER,
