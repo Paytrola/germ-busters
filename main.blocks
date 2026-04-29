@@ -1,1 +1,18 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables><block type="pxt-on-start" id="gceiR[.X*[[sYOt=npL[" x="0" y="0"></block></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="hnq/KT@=p;v!(pJC5)kp">mySprite</variable><variable type="KIND_SpriteKind" id="JzHNqkOT5%ZdPB7.o??o">Player</variable><variable type="KIND_SpriteKind" id="Ycn_@TZHmf*8#5d,7.9W">Projectile</variable><variable type="KIND_SpriteKind" id="pg{T`nk03ry_c*.uL=;t">Food</variable><variable type="KIND_SpriteKind" id="O9HQ2!MC,Bv|,|:p|mC0">Enemy</variable></variables><block type="pxt-on-start" id="gceiR[.X*[[sYOt=npL[" x="0" y="0"><statement name="HANDLER"><block type="variables_set" id="b/!TaGxqQ,UG]kAlTpeu"><field name="VAR" id="hnq/KT@=p;v!(pJC5)kp">mySprite</field><value name="VALUE"><shadow type="math_number" id="ACQ]9VjJu.faWF^{vto]"><field name="NUM">0</field></shadow><block type="spritescreate" id="CKDRvWaioudv6`kJ6hsr"><value name="img"><shadow type="screen_image_picker" id="Ha5q*_ZmIAV=pjJxI8IO"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="};|mad!4{5-8XA9byL5d"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="music_playable_play" id="9*5qyk6G^sH$lEQmD1A}"><field name="playbackMode">music.PlaybackMode.UntilDone</field><value name="toPlay"><shadow type="music_string_playable" id="(m5b?!vN0vJ1C]$U=u_m"><value name="melody"><shadow type="melody_editor" id="(wik,Z;rJ9ZUYmh*BMi-"><field name="melody">"- - - - - - - - "</field></shadow></value><value name="tempo"><shadow type="math_number_minmax" id="1Mq*Ma]o4bN^XAVa2qfJ"><mutation min="40" max="500" label="Tempo" precision="0"></mutation><field name="SLIDER">120</field></shadow></value></shadow></value></block></next></block></statement></block></xml>
