@@ -470,6 +470,6 @@ GERM_FIGHTER = sprites.create(img`
 tiles.setCurrentTilemap(tilemap`level1`)
 scene.setBackgroundColor(14)
 scene.cameraFollowSprite(GERM_FIGHTER)
-tiles.placeOnRandomTile(GERM_FIGHTER, assets.tile`transparency16`)
+tiles.placeOnRandomTile(GERM_FIGHTER, assets.tile`tile4`)
 controller.moveSprite(GERM_FIGHTER, 100, 0)
 GERM_FIGHTER.ay = 500
