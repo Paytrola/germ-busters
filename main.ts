@@ -108,14 +108,16 @@ function loadlevel () {
                 ....................
                 ....................
                 ....................
-                `, SpriteKind.Player)
-            tiles.placeOnTile(level_one_enemy, tiles.getTileLocation(0, 0))
+                `, SpriteKind.Enemy)
+            tiles.placeOnTile(level_one_enemy, value)
+            level_one_enemy.follow(GERM_FIGHTER, 50)
+            tiles.setTileAt(value, assets.tile`transparency16`)
         }
     } else {
         if (level == 2) {
             tiles.setCurrentTilemap(tilemap`level4`)
+            tiles.placeOnRandomTile(GERM_FIGHTER, assets.tile`myTile2`)
             scene.setBackgroundColor(14)
-            tiles.placeOnRandomTile(GERM_FIGHTER, assets.tile`tile4`)
         }
     }
 }
@@ -201,6 +203,9 @@ browserEvents.ArrowRight.onEvent(browserEvents.KeyEvent.Pressed, function () {
     200,
     false
     )
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`tile3`, function (sprite, location) {
+    GERM_FIGHTER.vy = -370
 })
 browserEvents.ArrowLeft.onEvent(browserEvents.KeyEvent.Pressed, function () {
     shoot_direction = -1
@@ -608,6 +613,20 @@ browserEvents.E.onEvent(browserEvents.KeyEvent.Pressed, function () {
         false
         )
     }
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite, location) {
+    level += 1
+    info.changeLifeBy(1)
+    loadlevel()
+})
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
+    sprites.destroy(otherSprite)
+    sprites.destroy(sprite)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    info.changeLifeBy(-1)
+    sprites.destroy(otherSprite)
 })
 let Basic_attack: Sprite = null
 let level_one_enemy: Sprite = null
