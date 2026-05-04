@@ -703,7 +703,7 @@ GERM_FIGHTER = sprites.create(img`
     `, SpriteKind.Player)
 controller.moveSprite(GERM_FIGHTER, 100, 0)
 GERM_FIGHTER.ay = 500
-info.setLife(3)
+info.setLife(5)
 info.setScore(0)
 scene.cameraFollowSprite(GERM_FIGHTER)
 loadlevel()
