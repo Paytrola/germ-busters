@@ -98,7 +98,7 @@
         "tileset": [
             "myTiles.transparency16"
         ],
-        "displayName": "level4"
+        "displayName": "level3"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",

@@ -115,7 +115,7 @@ function loadlevel () {
         }
     } else {
         if (level == 2) {
-            tiles.setCurrentTilemap(tilemap`level4`)
+            tiles.setCurrentTilemap(tilemap`level3`)
             tiles.placeOnRandomTile(GERM_FIGHTER, assets.tile`myTile2`)
             scene.setBackgroundColor(14)
             for (let value of tiles.getTilesByType(assets.tile`myTile1`)) {
