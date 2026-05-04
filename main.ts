@@ -254,6 +254,9 @@ browserEvents.ArrowRight.onEvent(browserEvents.KeyEvent.Pressed, function () {
 scene.onOverlapTile(SpriteKind.Player, assets.tile`tile3`, function (sprite, location) {
     GERM_FIGHTER.vy = -370
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
+    tiles.placeOnRandomTile(GERM_FIGHTER, assets.tile`myTile5`)
+})
 browserEvents.ArrowLeft.onEvent(browserEvents.KeyEvent.Pressed, function () {
     shoot_direction = -1
     animation.runImageAnimation(
@@ -662,8 +665,9 @@ browserEvents.E.onEvent(browserEvents.KeyEvent.Pressed, function () {
     }
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite, location) {
+    game.splash("\"welcome to the invisible mountain, beware of the new germ Thiomargarita!\"")
     level += 1
-    info.changeLifeBy(1)
+    info.changeLifeBy(10)
     loadlevel()
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
